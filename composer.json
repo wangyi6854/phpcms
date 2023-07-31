@@ -1,0 +1,13 @@
+{
+  "require": {
+    "ext-pdo": "*",
+    "ext-curl": "*",
+    "ext-fileinfo": "*",
+    "ext-gd": "*",
+    "phpoffice/phpspreadsheet": "^1.23",
+    "ext-zip": "*",
+    "alibabacloud/sdk": "*",
+    "ext-redis": "*",
+    "aliyuncs/oss-sdk-php": "~2.0"
+  }
+}
