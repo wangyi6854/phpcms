@@ -31,8 +31,8 @@ $debug = [];
 
 register_shutdown_function( 'shutdown' );
 spl_autoload_register('my_autoloader');
-//$old_error_handler = set_error_handler("error_handler");
-//$old_exception_handler = set_exception_handler('exception_handler');
+$old_error_handler = set_error_handler("error_handler");
+$old_exception_handler = set_exception_handler('exception_handler');
 
 $_SERVER['SERVER_NAME'] = !empty( $_SERVER['SERVER_NAME'] ) ? $_SERVER['SERVER_NAME'] : '';
 $_SERVER['HTTP_USER_AGENT'] = empty( $_SERVER['HTTP_USER_AGENT'] ) ? 'Unknown User Agent' : $_SERVER['HTTP_USER_AGENT'];
@@ -40,13 +40,13 @@ $_SERVER['HTTP_REFERER'] = empty( $_SERVER['HTTP_REFERER'] ) ? '' : $_SERVER['HT
 $ip = $_SERVER["REMOTE_ADDR"] ?? '0.0.0.0';
 $HTTP_USER_AGENT = $_SERVER['HTTP_USER_AGENT'];
 
-//$config[ 'cache_enable' ] = false;
-//define( 'DEBUG', 1 );
+$config[ 'cache_enable' ] = false;
+define( 'DEBUG', 1 );
 
 if ( in_array( $ip, array( '127.0.0.1', '172.31.0.1', '172.31.0.4' ) ) )
 {
 	define( 'DEBUG', 1 );
-	//$config[ 'cache_enable' ] = false;
+	$config[ 'cache_enable' ] = false;
 }
 
 if ( defined( 'DEBUG' ) )

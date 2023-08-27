@@ -119,6 +119,7 @@ class App extends Base
 
 	public function modulePrivilege( $module = null, $uid = null, $gid = null )
 	{
+        return true;
 		$uid    = $uid ?? $_SESSION[ 'uid' ] ?? 0;
 		$gid    = $gid ?? $_SESSION[ 'type' ] ?? 0;
 		$module = $module ?? $GLOBALS[ 'module' ];
@@ -600,7 +601,11 @@ where a.ticketId = $ticket_id order by a.id";
 		return $this->db->exec( "update user_info set street = $street where id = $id" );
 	}
 
-
+    public function gitRevision()
+    {
+        putenv('PATH=C:/Users/Administrator/scoop/shims;%PATH%');
+        return exec('git rev-parse --short HEAD');
+    }
 
 
 

@@ -1,5 +1,9 @@
 <?php
 echo 1;
+//chdir(ROOT);
+echo exec('git rev-parse --short HEAD');
+echo getcwd();
+exit();
 
 register_shutdown_function(function () {echo 3;});
 $a = new class {public function __destruct() {echo 4;}};

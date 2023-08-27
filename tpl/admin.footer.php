@@ -11,4 +11,6 @@
 <!-- AdminLTE App -->
 <script src="lib/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
 
+<div class="wrapper" id="debug-message"></div>
+
 </body></html>

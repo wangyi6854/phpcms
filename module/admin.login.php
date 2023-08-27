@@ -15,6 +15,7 @@ if ( !empty( $_POST['password'] ) )
 	{
 		$app->showMessage( '用户名或密码错误', './?module=admin.login' );
 	}
+
 }
 
 

@@ -1,19 +1,22 @@
 <?php include ROOT . '/tpl/admin.header.php'; ?>
-	<div class="container-fluid" id="content">
-		<div id="main">
-			<div class="container-fluid">
-				<div class="row-fluid">
-					<div class="span12">
-						<div class="box">
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php include ROOT . '/tpl/admin.footer.script.php'; ?>
-<style>
+    <?php include ROOT . '/tpl/admin.navbar.php'; ?>
 
-</style>
-<?php include ROOT . '/tpl/admin.footer.php'; ?>
+    <?php include ROOT . '/tpl/admin.sidebar.php'; ?>
+
+
+
+
+
+
+    <?php include ROOT . '/tpl/admin.content.footer.php'; ?>
+
+
+</div>
+<!-- ./wrapper -->
+
+<?php include ROOT . '/tpl/admin.footer.php';
+
+

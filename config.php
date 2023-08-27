@@ -38,7 +38,7 @@ $config = array(
 								array( 'orderid',				'i', 0 ),
 								array( 'start_id',				'i', 0 ),
 								array( 'page',					'i', 1 ),
-								array( 'pagesize',				'i', 20 ),
+								array( 'pagesize',				'i', 15 ),
 								array( 'redirect',				'b', false ),
 								array( 'module',				's', 'index' ),
 								array( 'tpl',					's', '' ),

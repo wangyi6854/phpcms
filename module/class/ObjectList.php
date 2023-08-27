@@ -1,6 +1,6 @@
 <?php
 
-class TableObjectList extends App
+class ObjectList extends App
 {
 	public $page			= 0;
 	public $startId			= 0;
@@ -37,7 +37,7 @@ class TableObjectList extends App
 		return preg_replace( '#(.*?)_list$#', '$1', decamelize( array_pop( $tmp ) ) );
 	}
 
-   	public function getList( $parts = [] )
+   	public function getList()
 	{
 		if ( $this->query )
 		{
@@ -47,11 +47,11 @@ class TableObjectList extends App
 		{
 			if ( $this->noCalcTotal )
 			{
-				$data = $this->getListByStartId( $parts );
+				$data = $this->getListByStartId();
 			}
 			else
 			{
-				$data = $this->getListByPage( $parts );
+				$data = $this->getListByPage();
 			}
 		}
 
@@ -102,7 +102,7 @@ class TableObjectList extends App
 		return $t ? 'where ' . $t : '';
 	}
 
-	protected function initCondition( $condition )
+	private function initCondition( $condition )
 	{
 		$this->startId		= empty( $condition[ 'startId' ] ) ? $this->startId : (int) $condition[ 'startId' ];
 		$this->page			= empty( $condition[ 'page' ] ) ? $this->page : (int) $condition[ 'page' ];

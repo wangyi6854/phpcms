@@ -164,7 +164,11 @@ function add_debug_info( &$output )
 	else
 	{
 		$debug_str = '<div style="white-space: pre; font-family: monospace; text-align: left;">' . PHP_EOL . htmlspecialchars( $debug_str ) . PHP_EOL . '</div>' . PHP_EOL;
-		$output = preg_replace( '/<\/body>\s*<\/html>/i', "$debug_str\\0", $output );
+		$output = preg_replace(
+            '#<div class="wrapper" id="debug-message"></div>#i',
+            "<div class=\"wrapper\" id=\"debug-message\">$debug_str</div>",
+            $output
+        );
 	}
 }
 

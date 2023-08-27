@@ -13,7 +13,7 @@ require_once ROOT . '/tpl/admin.header.php';
 
             <form action="./?module=admin.login" method="post">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="用户名">
+                    <input type="text" class="form-control" name="username" placeholder="用户名">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -21,7 +21,7 @@ require_once ROOT . '/tpl/admin.header.php';
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" placeholder="密码">
+                    <input type="password" class="form-control" name="password" placeholder="密码">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
