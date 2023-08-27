@@ -26,7 +26,3 @@ if ( !$id )
 {
 	$news->postDate = date( 'Y-m-d H:i:s' );
 }
-
-$catList = (new NewsCatList())->output();
-
-$plain_text_editor_cats = [ 5 ];
