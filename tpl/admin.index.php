@@ -17,6 +17,8 @@
 </div>
 <!-- ./wrapper -->
 
+<?php include ROOT . '/tpl/admin.footer.script.php'; ?>
+
 <?php include ROOT . '/tpl/admin.footer.php';
 
 

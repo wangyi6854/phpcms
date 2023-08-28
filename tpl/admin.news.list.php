@@ -75,6 +75,8 @@
 
 
 
+<?php include ROOT . '/tpl/admin.footer.script.php'; ?>
+
 
 
 <script type="text/javascript">

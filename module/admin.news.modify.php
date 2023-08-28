@@ -7,7 +7,8 @@ if ( !empty( $_POST[ 'title' ] ) )
 
 	$news = new News( $_POST );
 
-	if ( $news->save() )
+
+    if ( $news->save() )
 	{
 		$app->showFriendlyMessage( '编辑完成。' );
 	}
@@ -22,7 +23,3 @@ $news_obj = new News( $id );
 
 $news = $news_obj->output();
 
-if ( !$id )
-{
-	$news->postDate = date( 'Y-m-d H:i:s' );
-}
