@@ -165,8 +165,8 @@ function add_debug_info( &$output )
 	{
 		$debug_str = '<div style="white-space: pre; font-family: monospace; text-align: left;">' . PHP_EOL . htmlspecialchars( $debug_str ) . PHP_EOL . '</div>' . PHP_EOL;
 		$output = preg_replace(
-            '#<div class="wrapper" id="debug-message"></div>#i',
-            "<div class=\"wrapper\" id=\"debug-message\">$debug_str</div>",
+            '#id="debug-message"><#i',
+            "id=\"debug-message\">$debug_str<",
             $output
         );
 	}
@@ -306,6 +306,8 @@ function parse_coordinate_from_gis( $str )
 
 function show_message( $message = '', $return_to = '' )
 {
+    global $page_title, $extra_header;
+
 	if ( defined( 'ADMIN' ) )
 	{
 		include ROOT . '/tpl/admin.message.php';

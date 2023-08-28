@@ -1,9 +1,8 @@
 <?php
 require_once ROOT . '/tpl/admin.header.php';
 ?>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page dark-mode">
 <div class="login-box">
-    <!-- /.login-logo -->
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
             <b><?php echo $config[ 'site_name' ]; ?></b>
@@ -41,11 +40,22 @@ require_once ROOT . '/tpl/admin.header.php';
         <!-- /.card-body -->
     </div>
     <!-- /.card -->
+
+    <div class="card" id="debug-message"></div>
 </div>
 <!-- /.login-box -->
 
 
-<?php
-require_once ROOT . '/tpl/admin.footer.php';
+<!-- jQuery -->
+<script src="lib/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="lib/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="lib/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
 
 
+
+
+
+
+</body></html>
