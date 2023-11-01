@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./?module=admin.news.tag.list" class="nav-link">
+                    <a href="./?module=admin.tag.list" class="nav-link">
                         <p>
                             新闻标签管理
                         </p>
