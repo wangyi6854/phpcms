@@ -6,3 +6,4 @@
 /upload/
 /vendor/
 config-secret.php
+/test.php
