@@ -110,6 +110,7 @@ function shutdown()
 
 function debug( $data, $key = null )
 {
+	if ( defined(''))
 	global $debug;
 	if ( $key )
 	{

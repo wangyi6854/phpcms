@@ -1,9 +1,7 @@
 <?php
-//phpinfo();
-//exit();
-//include 'import_data.php';
-//exit();
-define( 'ADMIN', 1 );
+
+
+const ADMIN = 1;
 
 try
 {

@@ -1,13 +1,17 @@
 {
-  "require": {
-    "ext-pdo": "*",
-    "ext-curl": "*",
-    "ext-fileinfo": "*",
-    "ext-gd": "*",
-    "phpoffice/phpspreadsheet": "^1.23",
-    "ext-zip": "*",
-    "alibabacloud/sdk": "*",
-    "ext-redis": "*",
-    "aliyuncs/oss-sdk-php": "~2.0"
-  }
+    "name": "wangyi/phpcms-admin",
+    "type": "project",
+    "license": "BSD-2",
+    "autoload": {
+        "psr-4": {
+            "Wangyi\\PhpcmsAdmin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yi Wang",
+            "email": "wangyi6854@sohu.com"
+        }
+    ],
+    "require": {}
 }

@@ -15,12 +15,12 @@ $_SERVER[ 'DOCUMENT_ROOT' ] = rtrim( $_SERVER[ 'DOCUMENT_ROOT' ], '/' );
 $_SERVER[ 'QUERY_STRING' ] = !empty( $_SERVER[ 'QUERY_STRING' ] ) ? $_SERVER[ 'QUERY_STRING' ] : '';
 $_SERVER[ 'REQUEST_URI' ] = !empty( $_SERVER[ 'REQUEST_URI' ] ) ? $_SERVER[ 'REQUEST_URI' ] : $_SERVER[ 'SCRIPT_NAME' ] . '?' . $_SERVER[ 'QUERY_STRING' ];
 
-define( 'ROOT', __DIR__ );
-define( 'HOME', ltrim( preg_replace( '#[^/]+#', '..', str_replace( '\\', '/', dirname( $_SERVER['SCRIPT_NAME'] . 'a' ) ) ), '/' ) );
-define( 'PAGESIZE', 10 );
+const ROOT = __DIR__;
+define( "HOME", ltrim( preg_replace( '#[^/]+#', '..', str_replace( '\\', '/', dirname( $_SERVER[ 'SCRIPT_NAME' ] . 'a' ) ) ), '/' ) );
+const PAGESIZE = 10;
 
-require ROOT . '/config.php';
-require ROOT . '/config-secret.php';
+require ROOT . '/config/config.php';
+require ROOT . '/config/config-secret.php';
 
 $config = $config + $config_secret;
 
@@ -75,8 +75,6 @@ if ( PHP_SAPI != 'cli' )
 
 }
 
-$idcard = strtoupper( $idcard );
-
 $now = date( 'Y-m-d H:i:s' );
 
 $cache = Cache::singleton();
@@ -90,9 +88,9 @@ $ext_data = array();
 
 $msg = '';
 
-$page_url = "http://$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]";
+$page_url = "://$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]";
 
-$pagesize = isset( $pagesize ) ? $pagesize : PAGESIZE;
+$pagesize = $pagesize ?? PAGESIZE;
 $offset = ( $page - 1 ) * $pagesize;
 
 $post_process = '';
@@ -102,7 +100,7 @@ $extra_footer = '';
 $standalone_output = false;
 $additional_header = '';
 
-$direct_output = strpos( PHP_SAPI, 'cli' ) !== false ? true : false;
+$direct_output = str_contains( PHP_SAPI, 'cli' );
 
 $page_title			= $config[ 'site_name' ];
 $page_keywords		= $config[ 'site_name' ];

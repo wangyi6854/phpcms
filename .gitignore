@@ -1,5 +1,8 @@
-/config-secret.php
-/test/
 /.idea/
-/upload/
 /lib/
+/log/
+/src/lib/
+/test/
+/upload/
+/vendor/
+config-secret.php
