@@ -7,3 +7,5 @@
 /vendor/
 config-secret.php
 /test.php
+/module/t.php
+/tpl/t.php

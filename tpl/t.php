@@ -11,7 +11,13 @@
 <div id="ossfile">你的浏览器不支持flash,Silverlight或者HTML5！</div>
 
 <br/>
+<?php
+file_get_contents(      );
+file_put_contents( );
 
+$db->query( "select * from user where name = ''"  );
+
+?>
 
 <div id="container">
 	<a id="selectfiles" href="javascript:void(0);" class='btn'>选择文件</a>

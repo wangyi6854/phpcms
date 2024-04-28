@@ -1,4 +1,4 @@
-FROM rockylinux:8
+FROM rockylinux:9
 
 RUN /usr/bin/crb enable
 RUN dnf -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
